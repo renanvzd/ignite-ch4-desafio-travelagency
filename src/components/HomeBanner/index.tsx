@@ -22,15 +22,37 @@ export function HomeBanner() {
           alignSelf="start"
         >
           <Flex display="block" w={["81px", "426px"]}>
-            <Text fontSize="36px" fontFamily="Poppins" fontWeight="500" lineHeight="54px" color="#f5f8fa">
+            <Text
+              fontSize="36px"
+              fontFamily="Poppins"
+              fontWeight="500"
+              lineHeight="54px"
+              color="#f5f8fa"
+            >
               5 Continentes,
             </Text>
-            <Text fontSize="36px" fontFamily="Poppins" fontWeight="500" lineHeight="54px" color="#f5f8fa">
+            <Text
+              fontSize="36px"
+              fontFamily="Poppins"
+              fontWeight="500"
+              lineHeight="54px"
+              color="#f5f8fa"
+            >
               infinitas possibilidades
             </Text>
-            <Flex pt="20px" w={["81px", "426px"]}>
-              <Text fontSize="20px" fontFamily="Poppins" fontWeight="500" lineHeight="30px" color="#c7c5c5">
-                Chegou a hora de tirar do papel a viagem que você sempre sonhou.               </Text>
+            <Flex
+              pt="20px"
+              w={["81px", "426px"]}
+            >
+              <Text
+                fontSize="20px"
+                fontFamily="Poppins"
+                fontWeight="500"
+                lineHeight="30px"
+                color="#c7c5c5"
+              >
+                Chegou a hora de tirar do papel a viagem que você sempre sonhou.
+              </Text>
             </Flex>
           </Flex>
           <Image
