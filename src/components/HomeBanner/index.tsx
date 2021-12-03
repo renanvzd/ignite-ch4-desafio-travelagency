@@ -1,11 +1,18 @@
-import { Box, Flex, Image, Text, Grid } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Grid, useBreakpointValue } from "@chakra-ui/react";
 
 export function HomeBanner() {
+
+  const isMobile = useBreakpointValue({
+    base: false,
+    md: true,
+
+  });
+
   return (
     <Box >
       <Flex
         w="100%"
-        h={["163px", "250px", "250px", "335px"]}
+        h={["163px", "250px", "270px", "335px"]}
         bgImage="url('/Background.png')"
         bgPosition={["100% 20%", "100% 20%", "100% 30%"]}
         bgRepeat="no-repeat"
@@ -21,50 +28,47 @@ export function HomeBanner() {
           justifyContent="center"
           alignSelf="start"
         >
-          <Flex display="block" w={["81px", "426px"]}>
+          <Flex display="block" w={["250px", "426px"]} ml={["20px", "30px"]}>
             <Text
-              fontSize="36px"
-              fontFamily="Poppins"
+              fontSize={["18px", "26px", "36px"]}
               fontWeight="500"
-              lineHeight="54px"
+              lineHeight={["30px", "54px"]}
               color="#f5f8fa"
             >
               5 Continentes,
             </Text>
             <Text
-              fontSize="36px"
-              fontFamily="Poppins"
+              fontSize={["18px", "26px", "36px"]}
               fontWeight="500"
-              lineHeight="54px"
               color="#f5f8fa"
             >
-              infinitas possibilidades
+              infinitas possibilidades.
             </Text>
             <Flex
-              pt="20px"
-              w={["81px", "426px"]}
+              pt={["8px", "20px"]}
+              w={["285px", "400px", "426px"]}
             >
               <Text
-                fontSize="20px"
-                fontFamily="Poppins"
+                fontSize={["12px", "18px", "20px"]}
                 fontWeight="500"
-                lineHeight="30px"
+                lineHeight={["21px", "30px"]}
                 color="#c7c5c5"
               >
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
               </Text>
             </Flex>
           </Flex>
-          <Image
-            w={["81px", "380px"]}
+          {isMobile && <Image
+            w={["0px", "0px", "250px", "380px"]}
             alignContent="right"
             src='airplane.svg'
             alt='Avião'
             justifySelf="right"
             gridColumn="2"
-            pt="110px"
+            pt="130px"
+            paddingRight="35px"
             transform="rotate(3deg)"
-          />
+          />}
         </Grid>
       </Flex>
     </Box>

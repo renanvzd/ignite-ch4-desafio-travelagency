@@ -12,7 +12,7 @@ export function Header() {
       align="center"
       justify="center"
     >
-      <Image boxSize="200" src='logo.svg' alt='Logo' />
+      <Image boxSize={["120px", "200px"]} src='logo.svg' alt='Logo' />
     </Flex>
   );
 }
