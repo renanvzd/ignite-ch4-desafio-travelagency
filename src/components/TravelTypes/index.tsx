@@ -1,132 +1,38 @@
-import { Flex, SimpleGrid, Image, Center, Text } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/layout";
+import { Type } from "./Types";
 
-export function TravelTypes() {
+const travelTypes = [
+  { icon: "drink", text: "vida noturna" },
+  { icon: "surf", text: "praia" },
+  { icon: "building", text: "moderno" },
+  { icon: "museum", text: "clássico" },
+];
+
+export function Types() {
   return (
-    <Flex
-      bg="white"
+    <Grid
+      templateColumns={["1fr 1fr", "1fr 1fr", "1fr 1fr", "repeat(5, 1fr)"]}
       w="100%"
-      as="header"
-      mx="auto"
-      px="1rem"
-      h={["50px", "100px"]}
+      justify="space-between"
       align="center"
-      justify="center"
-      mt="140px"
+      mt={["10", "32"]}
+      mx="auto"
+      maxW="1160px"
+      flexWrap="wrap"
+      gap={[1, 5]}
     >
-      <SimpleGrid
-        h="100%"
-        mx="auto"
-        w="100%"
-        maxW="1160px"
-        alignItems="center"
-        templateColumns="repeat(5, 1fr)"
-        justifyContent="space-between"
-        display="flex"
-      >
-        <Flex display="block">
-          <Center>
-            <Image
-              src='icons/drink.svg'
-              alt='Cocktail'
-              w={["40px", "85px"]}
-              h={["40px", "85px"]}
-              gridColumn="1"
-            />
-          </Center>
-          <Text
-            fontSize="24px"
-            fontFamily="Poppins"
-            fontWeight="500"
-            lineHeight="54px"
-          >
-            Vida noturna
-          </Text>
-        </Flex>
-        <Flex display="block">
-          <Center>
-            <Image
-              src='icons/surf.svg'
-              alt='Prancha'
-              w={["40px", "85px"]}
-              h={["40px", "85px"]}
-              alignContent="center"
-              justifySelf="center"
-              gridColumn="2"
-            />
-          </Center>
-          <Text
-            fontSize="24px"
-            fontFamily="Poppins"
-            fontWeight="500"
-            lineHeight="54px"
-          >
-            Praia
-          </Text>
-        </Flex>
-        <Flex display="block">
-          <Center>
-            <Image
-              src='icons/building.svg'
-              alt='Predio'
-              w={["40px", "85px"]}
-              h={["40px", "85px"]}
-              alignContent="center"
-              justifySelf="center"
-              gridColumn="3"
-            />
-          </Center>
-          <Text
-            fontSize="24px"
-            fontFamily="Poppins"
-            fontWeight="500"
-            lineHeight="54px"
-          >
-            Moderno
-          </Text>
-        </Flex>
-        <Flex display="block">
-          <Center>
-            <Image
-              src='icons/museum.svg'
-              alt='Museu'
-              w={["40px", "85px"]}
-              h={["40px", "85px"]}
-              alignContent="center"
-              justifySelf="center"
-              gridColumn="4"
-            />
-          </Center>
-          <Text
-            fontSize="24px"
-            fontFamily="Poppins"
-            fontWeight="500"
-            lineHeight="54px"
-          >
-            Clássico
-          </Text>
-        </Flex>
-        <Flex display="block">
-          <Center>
-            <Image
-              src='icons/earth.svg'
-              alt='Terra'
-              w={["40px", "85px"]}
-              h={["40px", "85px"]}
-              alignContent="center"
-              justifySelf="center"
-              gridColumn="5"
-            />
-          </Center>
-          <Text
-            fontSize="24px"
-            fontFamily="Poppins"
-            fontWeight="500"
-            lineHeight="54px"
-          >
-            e mais...
-          </Text>
-        </Flex>
-      </SimpleGrid>
-    </Flex >
+      {travelTypes.map((typeOf) => (
+        <GridItem key="icon">
+          <Type
+            icon={typeOf.icon}
+            text={typeOf.text}
+          />
+        </GridItem>
+      ))}
+
+      <GridItem colSpan={[2, 2, 2, 1]}>
+        <Type icon="earth" text="e mais..." />
+      </GridItem>
+    </Grid>
   );
 }
