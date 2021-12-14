@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { ContinentInfo } from '../components/ContinentInfo';
+import { Cities } from '../components/ContinentCitySection';
 
 export default function Continents() {
   return (
@@ -28,8 +29,9 @@ export default function Continents() {
         </Text>
       </Flex>
 
-
       <ContinentInfo />
+
+      <Cities />
 
     </Box >
   )
