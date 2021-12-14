@@ -54,7 +54,7 @@ export function Slider({ continents }: SliderProps) {
               bgSize="cover"
               textAlign="center"
             >
-              <Link href={`/continent/${continent.slug}`}>
+              <Link href={`/continents/${continent.slug}`}>
                 <a>
                   <Heading
                     fontSize={["3xl", "4xl", "5xl"]}

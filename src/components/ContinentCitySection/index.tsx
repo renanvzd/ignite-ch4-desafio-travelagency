@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Grid, GridItem } from "@chakra-ui/layout";
+import { Flex, Heading, Grid, GridItem } from "@chakra-ui/layout";
 import { City } from "./Cities";
 
 const travelCities = [

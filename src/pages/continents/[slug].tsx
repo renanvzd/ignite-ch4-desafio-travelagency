@@ -1,6 +1,9 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import { ContinentInfo } from '../components/ContinentInfo';
-import { Cities } from '../components/ContinentCitySection';
+import { ContinentInfo } from '../../components/ContinentInfo';
+import { GetStaticProps } from 'next';
+import { getPrismicClient } from '../../services/prismic';
+import Prismic from '@prismicio/client';
+import { Cities } from '../../components/ContinentCitySection';
 
 export default function Continents() {
   return (
