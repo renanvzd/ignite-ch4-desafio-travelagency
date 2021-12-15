@@ -16,7 +16,7 @@ export interface Continent {
       cardImage: {
         url: string;
       };
-    };
+    }[];
   };
 }
 

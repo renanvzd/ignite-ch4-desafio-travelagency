@@ -42,15 +42,17 @@ export function Cities({ continent }: ContinentProps) {
         flexWrap="wrap"
         gap={[1, 5]}
       >
-        {travelCities.map((typeOf) => (
-          <GridItem key="city">
-            <City
-              cityImage={typeOf.cityImage}
-              city={typeOf.city}
-              country={typeOf.country}
-            />
-          </GridItem>
-        ))}
+        {continent.data.content.map(content => {
+          return (
+            <GridItem key={content.cardCity}>
+              <City
+                cityImage={content.cardImage.url}
+                city={content.cardCity}
+                country={content.cardCountry}
+              />
+            </GridItem>
+          );
+        })}
       </Grid>
     </>
   );

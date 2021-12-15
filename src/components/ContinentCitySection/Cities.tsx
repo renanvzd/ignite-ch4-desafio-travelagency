@@ -11,7 +11,7 @@ export function City({ cityImage, city, country }: CitiesProps) {
   return (
     <Flex direction={["column", "column"]} align="center" justify="center" mb="20px">
 
-      <Image src={`/cities/${cityImage}.png`} w="250px" h="173px" alt={city} />
+      <Image src={cityImage} w="250px" h="173px" alt={city} />
 
       <Flex
         w="250px"
