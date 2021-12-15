@@ -1,5 +1,6 @@
 import { Flex, Heading, Grid, GridItem } from "@chakra-ui/layout";
 import { City } from "./Cities";
+import { ContinentProps } from "../../pages/continents/[slug]";
 
 const travelCities = [
   { cityImage: "london", city: "Londres", country: "Reino Unido" },
@@ -9,7 +10,8 @@ const travelCities = [
   { cityImage: "amsterda", city: "Amsterdã", country: "Holanda" },
 ];
 
-export function Cities() {
+
+export function Cities({ continent }: ContinentProps) {
   return (
     <>
       <Flex
@@ -25,6 +27,7 @@ export function Cities() {
           fontSize={["lg", "3xl", "4xl"]}
         >
           Cidades + 100
+
         </Heading>
       </Flex>
 
@@ -52,3 +55,4 @@ export function Cities() {
     </>
   );
 }
+
